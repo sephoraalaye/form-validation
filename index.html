@@ -1,82 +1,71 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIC cafe</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/sale.css" rel="stylesheet">
+    <link href="css/contact_validation.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    <script src="./javascripts/sale.js" type="text/javascript" defer></script>
   </head>
   <body>
+    <!-- ここから追加element -->
+    <header>
+      <nav class="header_nav">
+        <a href="index.html" class="logo"><img src="./images/sample_logo_k.png"></a>
+        <ul class="global_nav">
+          <a href="index.html" class="global_nav_item">
+            <li>Home</li>
+          </a>
+          <a href="#menu" class="global_nav_item">
+            <li>Menu</li>
+          </a>
+          <a href="contact.html" class="global_nav_item">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <!-- So far -->
     <section class="section_inner">
       <div class="section_title">
-        <h1>Coffee Bean Sales</h1>
+        <h1>CONTACT</h1>
+        <p>Contact Us</p>
       </div>
-    </section>
-
-    <section class="section_inner menu_section">
-      <div class="center">
-        <h1 class="menu_title">(product) line-up</h1>
-      </div>
-      <ul class="menu_list coffee_menu">
-        <li class="caffee_menu_list_item">
-          <div class="caffee_menu_content">
-            <h2 class="menu_item_title">Original blend 200g</h2>
-            <p class="caffee_menu_price">500 yen</p>
-          </div>
-          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
-        </li>
-        <li class="caffee_menu_list_item">
-          <div class="caffee_menu_content">
-            <h2 class="menu_item_title">Original blend 500g</h2>
-            <p class="caffee_menu_price">900 yen</p>
-          </div>
-          <img src="images/sample_cafe1.jpg" class="caffee_menu_image">
-        </li>
-        <li class="caffee_menu_list_item">
-          <div class="caffee_menu_content">
-            <h2 class="menu_item_title">Special Blend 200g</h2>
-            <p class="caffee_menu_price">700 yen</p>
-          </div>
-          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
-        </li>
-        <li class="caffee_menu_list_item">
-          <div class="caffee_menu_content">
-            <h2 class="menu_item_title">Special Blend 500g</h2>
-            <p class="caffee_menu_price">1,200 yen</p>
-          </div>
-          <img src="images/sample_cafe3.jpg" class="caffee_menu_image">
-        </li>
-      </ul>
-      <h2>Shipping charges</h2>
-      <ul>
-        <li>500 yen for shipping charges for amounts less than 2,000 yen</li>
-        <li>250 yen over 2000 yen</li>
-        <li>Free of charge for orders over 3,000 yen</li>
-      </ul>
-    </section>
-
-    <section class="section_inner">
-      <h2>order</h2>
-      <form>
-        <p>Please select a product</p>
-        <div>
-          <select id="product" required>
-            <option hidden value="0">Please select</option>
-            <option value="500">Original blend 200g 500yen</option>
-            <option value="900">Original blend 500g 900yen</option>
-            <option value="700">Special Blend 200g 700yen</option>
-            <option value="1200">Special Blend 500g 1200yen</option>
-          </select>
-          <p>Please select quantity</p>
-          <input type="number" min="1" max="5" id="number" required>
+      <form action="#" method="POST" id="form">
+        <table class="contact">
+          <tr class="contact_line">
+            <td class="contact_sign"><label for="name">name</label></td>
+            <td class="contact_input"><input type="text" name="name" id="name"></td>
+          </tr>
+          <tr class="contact_line">
+            <td class="contact_sign"><label for="name">Email</label></td>
+            <td class="contact_input"><input type="email" name="email" id="email"></td>
+          </tr>
+          <tr class="contact_line">
+            <td class="contact_sign"><label for="name">Email (confirmation)</label></td>
+            <td class="contact_input"><input type="email" name="email_confirm" id="email_confirm"></td>
+          </tr>
+          <tr class="contact_content">
+            <td class="contact_sign"><label for="content">Contents</label></td>
+            <td class="contact_input"><textarea name="content" id="content"></textarea></td>
+          </tr>
+        </table>
+        <div class="contact_btn_area">
+          <button type="reset" class="contact_btn reset_btn">reset</button>
+          <button type="submit" class="contact_btn submit_btn">Send</button>
         </div>
-        <br>
-        <input type="button" class="btn" value="total amount" onclick="calc()">
-        <input type="button" class="btn" value="add to" onclick="add()">
       </form>
     </section>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href=""> <img src="./images/sample_logo_w.png"></a></li>
+        </ul>
+      </nav>
+      <p>© DIVIC Corp. All RIGHTS RESERVED.</p>
+    </footer>
+    <script type="text/javascript" src="javascripts/validation.js"></script>
   </body>
 </html>
