@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIC cafe</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/contact_validation.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- ここから追加element -->
+    <header>
+      <nav class="header_nav">
+        <a href="index.html" class="logo"><img src="./images/sample_logo_k.png"></a>
+        <ul class="global_nav">
+          <a href="index.html" class="global_nav_item">
+            <li>Home</li>
+          </a>
+          <a href="#menu" class="global_nav_item">
+            <li>Menu</li>
+          </a>
+          <a href="contact.html" class="global_nav_item">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <!-- So far -->
+    <section class="section_inner">
+      <div class="section_title">
+        <h1>CONTACT</h1>
+        <p>Contact Us</p>
+      </div>
+      <form action="#" method="POST" id="form">
+        <table class="contact">
+          <tr class="contact_line">
+            <td class="contact_sign"><label for="name">name</label></td>
+            <td class="contact_input"><input type="text" name="name" id="name"></td>
+          </tr>
+          <tr class="contact_line">
+            <td class="contact_sign"><label for="name">Email</label></td>
+            <td class="contact_input"><input type="email" name="email" id="email"></td>
+          </tr>
+          <tr class="contact_line">
+            <td class="contact_sign"><label for="name">Email (confirmation)</label></td>
+            <td class="contact_input"><input type="email" name="email_confirm" id="email_confirm"></td>
+          </tr>
+          <tr class="contact_content">
+            <td class="contact_sign"><label for="content">Contents</label></td>
+            <td class="contact_input"><textarea name="content" id="content"></textarea></td>
+          </tr>
+        </table>
+        <div class="contact_btn_area">
+          <button type="reset" class="contact_btn reset_btn">reset</button>
+          <button type="submit" class="contact_btn submit_btn">Send</button>
+        </div>
+      </form>
+    </section>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href=""> <img src="./images/sample_logo_w.png"></a></li>
+        </ul>
+      </nav>
+      <p>© DIVIC Corp. All RIGHTS RESERVED.</p>
+    </footer>
+    <script type="text/javascript" src="javascripts/validation.js"></script>
+  </body>
+</html>
