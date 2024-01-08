@@ -1,22 +1,3 @@
-// function emailValidation() {
-//   const form = document.getElementById('form');
-//   form.addEventListener('submit', e => {
-//     e.preventDefault();
-//     if(form.email.value !== form.email_confirm.value) {
-//       const element = document.createElement('p')
-//       const message = document.createTextNode("Email does not match")
-//       form.appendChild(element);
-//       element.appendChild(message);
-//       element.classList.add("alert");
-//       setTimeout(() => {
-//         form.removeChild(element)
-//       }, 3000)
-//     } else {
-//       form.submit();
-//     }
-//   });
-// };
-
 const parentElement = document.getElementsByTagName("tr")[0].parentNode;
 const troisiemeEnfant = parentElement.children[2];
 const element = document.createElement('p')
@@ -39,7 +20,8 @@ function ckecking(){
 
     if(form.email.value === form.email_confirm.value){
       form.email_confirm.classList.remove("backgroundColor")
-      parentElement.removeChild(element);
+      element.classList.add("cacher");
+
     }
   })
 }
